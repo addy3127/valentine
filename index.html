@@ -1179,15 +1179,21 @@
 
     .btn-no {
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 16px 36px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 14px 30px;
       border-radius: 50px;
       color: #e9d5ff;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
       user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      box-sizing: border-box;
+      max-width: 90%;
     }
 
     /* 📜 CERTIFICATE CELEBRATION MODAL */
@@ -1563,13 +1569,17 @@
         box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6);
       }
       .btn-no {
-        padding: 10px 22px;
-        font-size: 14px;
+        padding: 10px 24px;
+        font-size: 13.5px;
         font-weight: 600;
         border-radius: 40px;
         width: auto;
-        max-width: 180px;
+        max-width: 90%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         white-space: nowrap;
+        box-sizing: border-box;
       }
 
       /* Certificate Modal */
@@ -2462,6 +2472,33 @@
       playChime(420, 0.08);
     }
 
+    // Lightbox Keyboard & Touch Swipe Navigation
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("lightboxModal");
+      if (modal && modal.classList.contains("active")) {
+        if (e.key === "ArrowRight") nextLightbox();
+        else if (e.key === "ArrowLeft") prevLightbox();
+        else if (e.key === "Escape") closeLightbox();
+      }
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const lightboxEl = document.getElementById("lightboxModal");
+    if (lightboxEl) {
+      lightboxEl.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      lightboxEl.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 45) {
+          if (diff < 0) nextLightbox();
+          else prevLightbox();
+        }
+      }, { passive: true });
+    }
+
     function likePhoto(btn) {
       const countEl = btn.querySelector(".like-count");
       let count = parseInt(countEl.innerText) || 1;
@@ -2533,11 +2570,11 @@
       "No 🥺",
       "Are you sure? 🥺",
       "Think again! 😜",
-      "Error 404: 'No' not found! 💖",
-      "Can't click me! 🏃💨",
-      "Wrong choice cutie! 😉",
-      "Try the purple button! 💜",
-      "You're stuck with me forever! 💍"
+      "Can't catch me! 🏃💨",
+      "Wrong button! 😉",
+      "Nice try, cutie! 💖",
+      "Click YES instead! 💜",
+      "You know you want to! 💍"
     ];
     let noDodgeCount = 0;
 
