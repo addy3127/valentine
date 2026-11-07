@@ -1347,41 +1347,315 @@
 
     /* 📱 RESPONSIVE ADJUSTMENTS */
     @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+      #mainContent {
+        padding: 40px 14px 70px;
+      }
+      .ambient-glow {
+        filter: blur(80px);
+        opacity: 0.35;
+      }
+      .audio-pill {
+        top: 10px;
+        right: 10px;
+        padding: 5px 12px;
+        font-size: 11px;
+      }
+      .disc-icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        padding: 20px 6px 35px;
+      }
+      .tag-badge {
+        font-size: 11px;
+        padding: 6px 14px;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      }
       .hero-title {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.3;
+      }
+      .typing-cursor {
+        height: 24px;
       }
       .hero-subtitle {
-        font-size: 36px;
+        font-size: 34px;
+        margin-top: 6px;
+      }
+      .hero-quote {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 12px;
+        padding: 0 10px;
+      }
+      .nav-pills {
+        gap: 8px;
+        margin-top: 22px;
+      }
+      .nav-pill {
+        padding: 7px 14px;
+        font-size: 12px;
+      }
+
+      /* Counter */
+      .section-wrap {
+        margin: 45px 0;
+      }
+      .section-header {
+        margin-bottom: 24px;
+      }
+      .section-eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+      }
+      .section-heading {
+        font-size: 24px;
       }
       .counter-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 320px;
+      }
+      .counter-card {
+        padding: 16px 8px;
+        border-radius: 18px;
       }
       .counter-num {
-        font-size: 32px;
-      }
-      .proposal-title {
         font-size: 28px;
+        margin-bottom: 4px;
       }
-      .proposal-buttons {
-        flex-direction: column;
-        gap: 15px;
+      .counter-label {
+        font-size: 11px;
       }
-      .btn-yes, .btn-no {
-        width: 100%;
-        max-width: 280px;
+      .counter-footer {
+        font-size: 12px;
+        padding: 8px 16px;
+        line-height: 1.5;
+        max-width: 90%;
       }
+
+      /* Letters */
+      .letters-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .envelope-card {
+        padding: 20px 18px;
+        border-radius: 20px;
+      }
+      .envelope-title {
+        font-size: 16px;
+      }
+      .envelope-hint {
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+
+      /* Reasons */
+      .reason-card {
+        padding: 28px 18px;
+        border-radius: 22px;
+      }
+      .reason-icon {
+        font-size: 38px;
+        margin-bottom: 12px;
+      }
+      .reason-text {
+        font-size: 18px;
+        min-height: 65px;
+      }
+      .next-reason-btn {
+        padding: 11px 22px;
+        font-size: 14px;
+        margin-top: 18px;
+      }
+
+      /* Gallery - 2 beautiful scrapbook columns */
       .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .polaroid-card {
+        padding: 8px 8px 12px;
+        border-radius: 14px;
       }
       .photo-container {
-        height: 230px;
+        height: 175px;
+        border-radius: 10px;
       }
-      .audio-pill {
-        top: 12px;
-        right: 12px;
-        padding: 6px 12px;
+      .washi-tape {
+        width: 45px;
+        height: 15px;
+        top: -8px;
+      }
+      .photo-caption {
+        font-size: 15px;
+        margin-top: 8px;
+        padding: 0 2px;
+      }
+      .photo-actions {
+        font-size: 10px;
+      }
+      .heart-like-btn {
         font-size: 12px;
+      }
+
+      /* Kiss Meter */
+      .kiss-meter-box {
+        padding: 25px 16px;
+        border-radius: 22px;
+      }
+      .kiss-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 34px;
+      }
+      .kiss-count-text {
+        font-size: 17px;
+      }
+      .kiss-milestone-text {
+        font-size: 12px;
+      }
+
+      /* 💍 PROPOSAL SECTION - PROPER MOBILE SCALING */
+      .proposal-section {
+        margin: 50px 0 25px;
+        padding: 35px 16px;
+        border-radius: 26px;
+      }
+      .proposal-title {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+      }
+      .proposal-sub {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+        padding: 0 6px;
+      }
+      .proposal-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        min-height: 110px;
+        position: relative;
+        width: 100%;
+      }
+      .btn-yes {
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 40px;
+        width: auto;
+        max-width: 240px;
+        white-space: nowrap;
+        box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6);
+      }
+      .btn-no {
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 40px;
+        width: auto;
+        max-width: 180px;
+        white-space: nowrap;
+      }
+
+      /* Certificate Modal */
+      .certificate-card {
+        padding: 26px 18px;
+        border-radius: 24px;
+        max-height: 86vh;
+      }
+      .cert-seal {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+      .cert-subheading {
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      .cert-heading {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+      .cert-recipient {
+        font-size: 28px;
+        padding: 0 10px 4px;
+        margin-bottom: 12px;
+      }
+      .cert-text {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 15px;
+      }
+      .cert-perks {
+        font-size: 12px;
+        padding: 12px;
+        margin-bottom: 16px;
+        border-radius: 14px;
+      }
+      .cert-perks li {
+        margin-left: 14px;
+        margin-bottom: 4px;
+      }
+      .cert-whatsapp-btn {
+        font-size: 13px !important;
+        padding: 10px 18px !important;
+        width: 100%;
+        max-width: 240px;
+        justify-content: center;
+      }
+      .cert-close-btn {
+        font-size: 13px;
+        padding: 10px 18px;
+        width: 100%;
+        max-width: 240px;
+      }
+
+      /* Lightbox */
+      .lightbox-caption {
+        font-size: 20px;
+        padding: 0 10px;
+      }
+      .lightbox-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+      .lightbox-prev { left: 8px; }
+      .lightbox-next { right: 8px; }
+    }
+
+    @media (max-width: 360px) {
+      .hero-title {
+        font-size: 22px;
+      }
+      .counter-grid {
+        max-width: 290px;
+      }
+      .counter-num {
+        font-size: 24px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .photo-container {
+        height: 220px;
       }
     }
   </style>
@@ -2275,13 +2549,18 @@
       const phrase = noBtnPhrases[noDodgeCount % noBtnPhrases.length];
       noBtn.querySelector("span").innerText = phrase;
 
-      // Make YES button grow bigger each time
-      const scale = 1 + Math.min(noDodgeCount * 0.08, 0.45);
+      const isMobile = window.innerWidth <= 768;
+
+      // Controlled growth so YES button stays sleek and never overflows on mobile
+      const maxScale = isMobile ? 0.12 : 0.22;
+      const scale = 1 + Math.min(noDodgeCount * 0.025, maxScale);
       yesBtn.style.transform = `scale(${scale})`;
 
-      // Teleport NO button randomly inside the viewport area
-      const x = (Math.random() - 0.5) * 240;
-      const y = (Math.random() - 0.5) * 120;
+      // Safe teleport bounds so NO button NEVER jumps outside the card or off-screen
+      const maxX = isMobile ? 50 : 130;
+      const maxY = isMobile ? 25 : 55;
+      const x = (Math.random() - 0.5) * 2 * maxX;
+      const y = (Math.random() - 0.5) * 2 * maxY;
       noBtn.style.transform = `translate(${x}px, ${y}px)`;
 
       playChime(220, 0.08);
