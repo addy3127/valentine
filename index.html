@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>For My Chotu Baby 💜 Happy Valentine's Day</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💜</text></svg>">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta name="description" content="A special little universe crafted with all my love for Chotu Baby ✨ Happy Valentine's Day!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://addy3127.github.io/valentine/">
+  <meta property="og:title" content="For My Chotu Baby 💜">
+  <meta property="og:description" content="A special little universe crafted with all my love for you ✨ Happy Valentine's Day, Jaanu!">
+  <meta property="og:image" content="https://addy3127.github.io/valentine/ruchi.jpeg">
+  <meta name="theme-color" content="#9333ea">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,11 +118,13 @@
       background: radial-gradient(circle at center, #24103e 0%, #0d0716 100%);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       z-index: 9999;
-      padding: 20px;
+      padding: 30px 16px;
       transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     #lockScreen.unlocked {
@@ -127,11 +141,12 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--lavender-glow);
       border-radius: 32px;
-      padding: 40px 30px;
+      padding: 35px 24px;
       max-width: 400px;
       width: 100%;
       text-align: center;
       position: relative;
+      margin: auto 0;
       animation: popIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -658,17 +673,19 @@
     .letter-modal {
       position: fixed;
       inset: 0;
-      background: rgba(13, 7, 22, 0.85);
+      background: rgba(13, 7, 22, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 20px;
+      padding: 30px 16px;
       z-index: 10000;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.4s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .letter-modal.active {
@@ -680,7 +697,7 @@
       background: #faf5ff;
       color: #3b0764;
       border-radius: 28px;
-      padding: 40px 35px;
+      padding: 35px 26px 30px;
       max-width: 520px;
       width: 100%;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 50px rgba(192, 132, 252, 0.5);
@@ -688,6 +705,21 @@
       transform: translateY(30px) scale(0.95);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       border: 1px solid #e9d5ff;
+      margin: auto 0;
+      max-height: 86vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: #c084fc transparent;
+    }
+
+    .letter-paper::-webkit-scrollbar {
+      width: 6px;
+    }
+    .letter-paper::-webkit-scrollbar-thumb {
+      background: #c084fc;
+      border-radius: 6px;
     }
 
     .letter-modal.active .letter-paper {
@@ -695,12 +727,26 @@
     }
 
     .letter-close-btn {
-      position: absolute;
-      top: 18px;
-      right: 18px;
+      position: sticky;
+      top: 0;
+      float: right;
       width: 36px;
       height: 36px;
       border-radius: 50%;
+      background: #f3e8ff;
+      border: none;
+      color: #6b21a8;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+      margin-top: -10px;
+      margin-right: -10px;
+      box-shadow: 0 4px 12px rgba(107, 33, 168, 0.15);
+    }
       background: #f3e8ff;
       border: none;
       color: #6b21a8;
@@ -1148,17 +1194,19 @@
     .certificate-modal {
       position: fixed;
       inset: 0;
-      background: rgba(10, 4, 18, 0.9);
+      background: rgba(10, 4, 18, 0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 20px;
+      padding: 30px 16px;
       z-index: 10005;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.5s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .certificate-modal.active {
@@ -1170,7 +1218,7 @@
       background: linear-gradient(145deg, #ffffff, #faf5ff);
       color: #3b0764;
       border-radius: 32px;
-      padding: 45px 35px;
+      padding: 35px 25px;
       max-width: 580px;
       width: 100%;
       text-align: center;
@@ -1179,6 +1227,21 @@
       box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), 0 0 60px rgba(192, 132, 252, 0.6);
       transform: scale(0.9);
       transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      margin: auto 0;
+      max-height: 88vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: #c084fc transparent;
+    }
+
+    .certificate-card::-webkit-scrollbar {
+      width: 6px;
+    }
+    .certificate-card::-webkit-scrollbar-thumb {
+      background: #c084fc;
+      border-radius: 6px;
     }
 
     .certificate-modal.active .certificate-card {
@@ -1769,7 +1832,7 @@
         <button class="btn-yes" id="yesBtn" onclick="acceptProposal()">
           <span>YES, Forever! 💜</span>
         </button>
-        <button class="btn-no" id="noBtn" onmouseover="dodgeNo()" onclick="dodgeNo()">
+        <button class="btn-no" id="noBtn" onmouseover="dodgeNo()" ontouchstart="dodgeNo()" onclick="dodgeNo()">
           <span>No 🥺</span>
         </button>
       </div>
@@ -1800,8 +1863,8 @@
   </div>
 
   <!-- 📜 OFFICIAL CERTIFICATE MODAL -->
-  <div class="certificate-modal" id="certificateModal">
-    <div class="certificate-card" id="certCard">
+  <div class="certificate-modal" id="certificateModal" onclick="closeCertificate()">
+    <div class="certificate-card" id="certCard" onclick="event.stopPropagation()">
       <div class="cert-seal">💍</div>
       <div class="cert-subheading">Official Certificate Of Eternal Romance</div>
       <h2 class="cert-heading">SHE SAID YES! 🎉💜</h2>
@@ -1818,7 +1881,12 @@
           <li>100% unconditional love, forever & always.</li>
         </ul>
       </div>
-      <button class="cert-close-btn" onclick="closeCertificate()">I Love You So Much 💜</button>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://api.whatsapp.com/send?text=I%20said%20YES!%20%F0%9F%92%9C%20Happy%20Valentine's%20Day%20my%20love!%20%F0%9F%92%8D%E2%9C%A8" target="_blank" class="cert-whatsapp-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; background:#25D366; color:white; font-weight:600; padding:12px 25px; border-radius:30px; font-size:15px; box-shadow:0 8px 20px rgba(37,211,102,0.35);">
+          <span>Send Answer to Addy 📲</span>
+        </a>
+        <button class="cert-close-btn" onclick="closeCertificate()">I Love You Too 💜</button>
+      </div>
     </div>
   </div>
 
